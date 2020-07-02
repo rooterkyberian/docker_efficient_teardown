@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  signal:
+    image: docker_signal
+    command: ./signal.sh no list
+  signal2:
+    image: docker_signal
+    command:
+      - ./signal.sh
+      - list
