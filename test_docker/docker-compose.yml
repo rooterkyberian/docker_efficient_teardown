@@ -1,11 +1,25 @@
 version: "3.5"
 
 services:
-  signal:
-    image: docker_signal
+  docker_efficient_teardown_1:
+    image: docker_efficient_teardown_1
+    build:
+      dockerfile: Dockerfile.1
+      context: .
+    container_name: docker_efficient_teardown_1_run
+  docker_efficient_teardown_2:
+    image: docker_efficient_teardown_2
+    build:
+      dockerfile: Dockerfile.2
+      context: .
+    container_name: docker_efficient_teardown_2_run
+  docker_efficient_teardown_3:
+    image: docker_efficient_teardown_2
+    container_name: docker_efficient_teardown_3_run
     command: ./signal.sh no list
-  signal2:
-    image: docker_signal
+  docker_efficient_teardown_4:
+    image: docker_efficient_teardown_2
+    container_name: docker_efficient_teardown_4_run
     command:
       - ./signal.sh
       - list

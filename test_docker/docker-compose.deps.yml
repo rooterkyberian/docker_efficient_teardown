@@ -1,0 +1,23 @@
+version: "3.5"
+
+x-def: &def
+  image: docker_efficient_teardown_2
+  build:
+    dockerfile: Dockerfile.2
+    context: .
+
+services:
+  def_deps_1:
+    <<: *def
+  def_deps_2:
+    <<: *def
+    depends_on:
+      - def_deps_1
+  def_deps_3:
+    <<: *def
+    depends_on:
+      - def_deps_2
+  def_deps_4:
+    <<: *def
+    depends_on:
+      - def_deps_3
