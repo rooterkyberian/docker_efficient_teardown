@@ -1,0 +1,17 @@
+version: "3.5"
+
+x-python_teardown_subprocesses: &python_teardown_subprocesses
+  image: python:3.9-slim
+  volumes:
+    - .:/mnt/
+  logging:
+    driver: json-file
+
+services:
+  python_teardown_subprocesses:
+    <<: *python_teardown_subprocesses
+    command: python /mnt/spawner.py
+
+  python_teardown_subprocesses_with_cleanup:
+    <<: *python_teardown_subprocesses
+    command: python /mnt/spawner.py --cleanup
