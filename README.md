@@ -34,7 +34,6 @@ docker_efficient_teardown_2_run | Script started with hello
 docker_efficient_teardown_2_run |     PID TTY          TIME CMD
 docker_efficient_teardown_2_run |       1 ?        00:00:00 signal.sh
 docker_efficient_teardown_2_run |       8 ?        00:00:00 ps
-docker_efficient_teardown_2_run | Handler run with
 ```
 
 ## Dockerfile `ENTRYPOINT`

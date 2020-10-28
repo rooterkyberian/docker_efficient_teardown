@@ -25,5 +25,5 @@ output:
     /test_python_python_teardown_subprocesses_with_cleanup_1
     1.651
     Attaching to test_python_python_teardown_subprocesses_1, test_python_python_teardown_subprocesses_with_cleanup_1
-    python_teardown_subprocesses_with_cleanup_1  | Script started with ['/mnt/spawner.py', '--cleanup']
-    python_teardown_subprocesses_1               | Script started with ['/mnt/spawner.py']
+    python_teardown_subprocesses_with_cleanup_1  | Script started with {'cleanup': True}
+    python_teardown_subprocesses_1               | Script started with {'cleanup': False}
